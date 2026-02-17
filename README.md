@@ -1,5 +1,9 @@
 # OpenClaw OCR Skill
 
+![GitHub Actions](https://github.com/flywindW666/openclaw-ocr-skill/actions/workflows/test.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-green.svg)
+
 一个为OpenClaw设计的OCR（光学字符识别）技能，使用Tesseract OCR从图片中提取文字。
 
 ## 功能特性
@@ -30,7 +34,7 @@ brew install tesseract-lang
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/openclaw-ocr-skill.git
+git clone https://github.com/flywindW666/openclaw-ocr-skill.git
 cd openclaw-ocr-skill
 
 # 复制到OpenClaw技能目录
