@@ -1,0 +1,41 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Create release archive
+      run: |
+        # 创建版本号
+        VERSION=${GITHUB_REF#refs/tags/}
+        echo "Creating release for version: $VERSION"
+        
+        # 创建发布包
+        mkdir -p openclaw-ocr-skill-$VERSION
+        cp -r ocr-skill scripts README.md LICENSE openclaw-ocr-skill-$VERSION/
+        
+        # 创建压缩包
+        tar -czf openclaw-ocr-skill-$VERSION.tar.gz openclaw-ocr-skill-$VERSION
+        zip -r openclaw-ocr-skill-$VERSION.zip openclaw-ocr-skill-$VERSION
+        
+        # 显示文件列表
+        echo "Release files:"
+        ls -la *.tar.gz *.zip
+        
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          openclaw-ocr-skill-*.tar.gz
+          openclaw-ocr-skill-*.zip
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,36 @@
+{
+  "name": "openclaw-ocr-skill",
+  "version": "1.0.0",
+  "description": "OCR skill for OpenClaw - Extract text from images using Tesseract",
+  "main": "scripts/ocr_tool.py",
+  "scripts": {
+    "test": "python tests/test_ocr.py",
+    "ocr": "./scripts/ocr.sh",
+    "install-skill": "sudo cp -r ocr-skill /usr/lib/node_modules/openclaw-cn/skills/",
+    "build": "echo 'Building OCR skill package...'"
+  },
+  "keywords": [
+    "openclaw",
+    "ocr",
+    "tesseract",
+    "text-extraction",
+    "ai",
+    "skill"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/openclaw-ocr-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/openclaw-ocr-skill/issues"
+  },
+  "homepage": "https://github.com/yourusername/openclaw-ocr-skill#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0",
+    "python": ">=3.7"
+  }
+}

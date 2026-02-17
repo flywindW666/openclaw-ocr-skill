@@ -1,0 +1,63 @@
+# 临时文件
+*.tmp
+*.temp
+*.log
+
+# 编译文件
+*.pyc
+__pycache__/
+*.so
+
+# 环境文件
+.env
+.env.local
+.env.*.local
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 测试输出
+test_output/
+coverage/
+
+# 用户数据
+*.db
+*.sqlite
+*.sqlite3
+
+# 大文件
+*.zip
+*.tar.gz
+*.7z
+
+# OCR输出文件（用户生成）
+*_text.txt
+*_output.txt
+
+# 示例图片（如果需要忽略）
+examples/*.jpg
+examples/*.png
+examples/*.jpeg
+
+# 本地配置
+local_config.json
+config.local.json
+
+# 日志
+logs/
+*.log
+
+# 备份文件
+*.bak
+*.backup
+
+# 临时目录
+tmp/
+temp/
